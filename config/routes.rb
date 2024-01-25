@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  # API ROUTES
+  namespace :api do
+    namespace :v1 do
+      resources :locations do
+        resources :recordings
+      end
+    end
+  end
+
+  resources :locations
+
+
   get 'homepage/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
