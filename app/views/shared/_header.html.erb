@@ -1,7 +1,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid d-flex align-items-center justify-content-between">
-    <%= link_to root_path, class: 'logo d-flex align-items-center  me-auto me-lg-0' do %>
+    <%= link_to homepage_index_path, class: 'logo d-flex align-items-center  me-auto me-lg-0' do %>
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <%#= image_tag 'logo.png', alt: '' %>
       <i class="bi bi-camera"></i>
@@ -10,19 +10,19 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><%= link_to 'Home', root_path, class: 'active' %></li>
-        <li><%= link_to 'About', root_path %></li>
+        <li><%= link_to 'Home', homepage_index_path, class: 'active' %></li>
+        <li><%= link_to 'About', homepage_index_path %></li>
         <li class="dropdown">
           <%= link_to '#', class: 'nav-link dropdown-toggle', id: 'navbarDropdown', role: 'button', 'data-bs-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' do %>
             <span>Gallery</span> <i class="bi dropdown-indicator"></i>
           <% end %>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><%= link_to 'Nature', root_path %></li>
-            <li><%= link_to 'People', root_path %></li>
-            <li><%= link_to 'Architecture', root_path %></li>
-            <li><%= link_to 'Animals', root_path %></li>
-            <li><%= link_to 'Sports', root_path %></li>
-            <li><%= link_to 'Travel', root_path %></li>
+            <li><%= link_to 'Nature', homepage_index_path %></li>
+            <li><%= link_to 'People', homepage_index_path %></li>
+            <li><%= link_to 'Architecture', homepage_index_path %></li>
+            <li><%= link_to 'Animals', homepage_index_path %></li>
+            <li><%= link_to 'Sports', homepage_index_path %></li>
+            <li><%= link_to 'Travel', homepage_index_path %></li>
             <li class="dropdown">
               <%= link_to '#', class: 'nav-link dropdown-toggle', id: 'subMenuDropdown', role: 'button', 'data-bs-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' do %>
                 <span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
@@ -35,8 +35,8 @@
             </li>
           </ul>
         </li>
-        <li><%= link_to 'Services', root_path %></li>
-        <li><%= link_to 'Contact', root_path %></li>
+        <li><%= link_to 'Services', homepage_index_path %></li>
+        <li><%= link_to "Log out", destroy_user_session_path,  'data-turbo-method': :delete %></li>
       </ul>
     </nav>
 
